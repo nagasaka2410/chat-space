@@ -1,0 +1,51 @@
+.wrapper
+  .top-wrapper
+    %p グループを作成しました
+
+  = render "layouts/side"
+
+  .main-wrapper
+    .chat-header
+      .select-group
+        .select-group__name Naga
+
+        %ul.member-list
+          %li.member-list__member Member :
+          %li.member-list__member Naga
+          %li.member-list__member saka
+
+      .edit-btn
+        %a(href="#")Edit
+
+
+    .messages
+      .message
+        .section
+          %p.section__user-name Naga
+          %p.section__date 2019/4/16(tue) 10:15:20
+
+        %p.text-message 元気百倍
+
+      .message
+        .section
+          %p.section__user-name Naga
+          %p.section__date 2019/4/16(tue) 10:15:20
+
+        %p.text-message 元気百倍
+
+      .message
+        .section
+          %p.section__user-name Naga
+          %p.section__date 2019/4/16(tue) 10:15:20
+
+        %p.text-message 元気百倍
+
+
+    .form
+      .input-form
+        %input.input-form__message(type="text" placeholder="type a message" )
+        %label.input-form__message__icon 
+          =link_to "" do
+            = fa_icon("image")
+
+      %input.form__submit-btn(type="submit" value="Send")/ 
