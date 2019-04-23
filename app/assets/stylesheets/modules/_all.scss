@@ -1,0 +1,15 @@
+.wrappr {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.top-wrapper {
+  width: 100%;
+  background-color: $BlueColor;
+  z-index: 1;
+  p {
+    text-align: center;
+    color: $WhiteColor;
+  }
+}
