@@ -43,6 +43,7 @@
     background-color: #fafafa;
     .message {
       padding: 40px;
+
       .section{
         height: 24px;
         &__user-name {
@@ -98,7 +99,6 @@
         }
       }
     }
-
     &__submit-btn {
       background-color: $BlueColor;
       height: 50px;
