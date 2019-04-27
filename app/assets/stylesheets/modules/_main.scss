@@ -2,26 +2,25 @@
   width: calc(100vw - 300px);
   float: left;
   height: 100%;
-  .chat-header {
+  .header {
     height: 100px;
     border-bottom: solid 1px #eeeeee;
     padding: 0 40px;
     box-sizing: border-box;
-    .select-group {
+    .header-left {
       float: left;
       margin-top: 35px;
       &__name {
         font-size: 20px;
         color: #333333;
       }
-      .member-list {
+      &__members {
         float: left;
-        &__member {
+        .member {
           margin-top: 15px;
           color: $LightGray;
-          font-size: 12px;
-          color: $LightGray;
           display: inline-block;
+          @include fontsize;
         }
       }
     }
@@ -54,9 +53,8 @@
   
         &__date {
           float: left;
-          font-size: 12px;
-          color: $LightGray;
           margin-left: 10px;
+          @include fontsize;
         }
       }
       .text-message {

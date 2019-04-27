@@ -5,14 +5,14 @@
   = render "layouts/side"
 
   .main-wrapper
-    .chat-header
-      .select-group
-        .select-group__name Naga
+    .header
+      .header-left
+        .header-left__name Naga
 
-        %ul.member-list
-          %li.member-list__member Member :
-          %li.member-list__member Naga
-          %li.member-list__member saka
+        %ul.header-left__members
+          %li.member Member :
+          %li.member Naga
+          %li.member saka
 
       .edit-btn
         %a(href="#")Edit
