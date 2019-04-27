@@ -1,0 +1,112 @@
+.main-wrapper {
+  width: calc(100vw - 300px);
+  float: left;
+  height: 100%;
+  .header {
+    height: 100px;
+    border-bottom: solid 1px #eeeeee;
+    padding: 0 40px;
+    box-sizing: border-box;
+    .header-left {
+      float: left;
+      margin-top: 35px;
+      &__name {
+        font-size: 20px;
+        color: #333333;
+      }
+      &__members {
+        float: left;
+        .member {
+          margin-top: 15px;
+          color: $LightGray;
+          display: inline-block;
+          @include fontsize;
+        }
+      }
+    }
+    .edit-btn {
+      float: right;
+      height: 40px;
+      border: solid 1px $BlueColor;
+      padding: 0 20px;
+      margin-top: 28px; 
+      line-height: 40px;
+      a{
+        text-decoration: none;
+        color: $BlueColor;
+      }
+    }
+  }
+  .messages {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    .message {
+      padding: 40px;
+      .section{
+        height: 24px;
+        &__user-name {
+          float: left;
+          font-size: 16px;
+          font-weight: bold;
+          color: $GrayColor;
+        }
+  
+        &__date {
+          float: left;
+          margin-left: 10px;
+          @include fontsize;
+        }
+      }
+      .text-message {
+        margin-top: 10px;
+        clear: both;
+        font-size: 14px;
+        color: $GrayColor;
+      }
+    }
+  }
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    height: 90px;
+    .input-form {
+      float: left;
+      box-sizing: border-box;
+      border: none;
+      height: 50px;
+      width: calc(100% - 150px);
+      position: relative;
+      &__message {
+        background-color: $WhiteColor;
+        float: left;
+        height: 50px;
+        padding-left: 10px;
+        width: calc(100% - 10px);
+        margin: 0;
+        position: relative;
+        top: -2px;
+        right: 2px;
+        &__icon {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 25px;
+          color: $WhiteColor;
+        }
+      }
+    }
+
+    &__submit-btn {
+      background-color: $BlueColor;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      border: none;
+      color: $WhiteColor;
+      float: right;
+      font-size: 16px;
+    }
+  }
+}
+
