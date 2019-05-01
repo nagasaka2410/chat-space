@@ -1,9 +1,6 @@
 .wrapper
-  .top-wrapper
-    %p グループを作成しました
-
   = render "layouts/side"
-
+  
   .main-wrapper
     .header
       .header-left
@@ -15,7 +12,7 @@
           %li.member saka
 
       .edit-btn
-        =link_to 'Edit', '#'
+        =link_to 'Edit', edit_group_path(current_user)
 
     .messages
       .message
