@@ -15,33 +15,13 @@
         =link_to 'Edit', edit_group_path(current_user)
 
     .messages
-      .message
-        .section
-          %p.section__user-name Naga
-          %p.section__date 2019/4/16(tue) 10:15:20
-
-        %p.text-message 元気百倍
-
-      .message
-        .section
-          %p.section__user-name Naga
-          %p.section__date 2019/4/16(tue) 10:15:20
-
-        %p.text-message 元気百倍
-
-      .message
-        .section
-          %p.section__user-name Naga
-          %p.section__date 2019/4/16(tue) 10:15:20
-
-        %p.text-message 元気百倍
-
+      = render @messages
 
     .form
-      .input-form
-        %input.input-form__message(type="text" placeholder="type a message" )
-        %label.input-form__message__icon 
-          =link_to "" do
-            = fa_icon("image")
-
-      %input.form__submit-btn(type="submit" value="Send")/ 
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
