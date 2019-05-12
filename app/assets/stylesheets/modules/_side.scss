@@ -27,6 +27,7 @@
   .group-list {
     background-color: $NavyColor;
     height: calc(100vh - 100px);
+    color: $WhiteColor;
     .group {
       padding: 20px;
       @include fontchange;
