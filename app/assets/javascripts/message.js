@@ -69,6 +69,5 @@ $(function(){
       clearInterval();
     }
   };
-  reloadMessages(); 
   setInterval(reloadMessages, 5000);
 })
