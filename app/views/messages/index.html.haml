@@ -4,12 +4,14 @@
   .main-wrapper
     .header
       .header-left
-        .header-left__name Naga
+        .header-left__name 
+          =current_user.name
 
         %ul.header-left__members
-          %li.member Member :
-          %li.member Naga
-          %li.member saka
+          Member :
+          %li.member
+          - @group.users.each do |user|
+            = user.name
 
       .edit-btn
         =link_to 'Edit', edit_group_path(current_user)
