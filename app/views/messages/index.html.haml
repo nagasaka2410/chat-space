@@ -5,7 +5,7 @@
     .header
       .header-left
         .header-left__name 
-          =current_user.name
+          =@group.name
 
         %ul.header-left__members
           Member :
@@ -14,7 +14,7 @@
             = user.name
 
       .edit-btn
-        =link_to 'Edit', edit_group_path(current_user)
+        =link_to 'Edit', edit_group_path(@group)
 
     .messages
       = render @messages

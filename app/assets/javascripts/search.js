@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(function(){
 
   var search_list = $("#user-search-result")
   var add_list = $("#chat-group-users")
@@ -28,7 +28,7 @@ $(document).on('turbolinks:load', function() {
                 </div>`
     add_list.append(html);
   }
-
+  
   $("#user-search-field").on("keyup", function(){
     var input = $("#user-search-field").val();
     if(input!==""){
